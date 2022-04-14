@@ -1,218 +1,253 @@
-CONTENTS OF THIS FILE
----------------------
+<div id="top"></div>
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
+
+
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
 
- * Introduction
- * Installation
- * Starting the Bot
-  * Starting the Bot with Drush
-  * Starting the Bot with bot_start.php
- * Using the Bot
- * IRC Message Hooks
- * Other IRC Hooks
- * Design Decisions
 
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-INTRODUCTION
-------------
+  <h3 align="center">Best-README-Template</h3>
 
-Current Maintainer: Morbus Iff <morbus@disobey.com>
+  <p align="center">
+    An awesome README template to jumpstart your projects!
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+  </p>
+</div>
+
+
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-Druplicon is an IRC bot that has been servicing #drupal, #drupal-support,
-and many other IRC channels since 2005, proving itself an invaluable resource.
-Originally a Perl Bot::BasicBot::Pluggable application coded by Morbus Iff,
-he always wanted to make the official #drupal bot an actual Drupal module.
 
-This is the fruit of these labors. Whilst the needs of Druplicon are driving
-the future and design of the module, this is intended as a generic framework
-for IRC bots within Drupal, and usage outside of Druplicon is encouraged.
 
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-INSTALLATION
-------------
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-The bot.module is not like other Drupal modules and requires a bit more
-effort than normal to get going. Unlike a regular Drupal page load, an
-IRC bot has to run forever and, for reasons best explained elsewhere, this
-entails running the bot through a shell, NOT through web browser access.
+There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
-1. This module REQUIRES Net_SmartIRC, a PHP class available from PEAR.
-   In most cases, you can simply run "pear install Net_SmartIRC".
+Here's why:
+* Your time should be focused on creating something amazing. A project that solves a problem and helps others
+* You shouldn't be doing the same tasks over and over like creating a README from scratch
+* You should implement DRY principles to the rest of your life :smile:
 
-2. Copy this bot/ directory to your sites/SITENAME/modules directory.
+Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
 
-3. Enable the module(s) and then configure them at admin/config/bot.
+Use the `BLANK_README.md` to get started.
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-STARTING THE BOT
-----------------
 
-If you have Drush installed, the following commands are available:
 
-  drush bot-start
-  drush bot-status
-  drush bot-status-reset
-  drush bot-stop
+### Built With
 
-Note, however, that bot.module does use your site's URL in some commands, but
-Drush doesn't ever know your URL by default. To ensure proper reporting by the
-bot, you'll need to either set your $base_url in settings.php, or tell Drush
-your URL with "--uri=http://example.com/". If you don't, the bot will report
-all URLs as "http://default/". I prefer setting the URL in settings.php.
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-To start the bot as a background process, use:
+* [Next.js](https://nextjs.org/)
+* [React.js](https://reactjs.org/)
+* [Vue.js](https://vuejs.org/)
+* [Angular](https://angular.io/)
+* [Svelte](https://svelte.dev/)
+* [Laravel](https://laravel.com)
+* [Bootstrap](https://getbootstrap.com)
+* [JQuery](https://jquery.com)
 
-  nohup drush bot-start &
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Stopping the bot is accomplished with:
 
-  drush bot-stop
 
-If the bot crashes, is killed, Ctrl-C'd, or otherwise improperly interrupted,
-the internal connection status will be stuck in a "connected" state, and
-Drush will refuse to "bot-start". You can force a status reset with "drush
-bot-status-reset".
+<!-- GETTING STARTED -->
+## Getting Started
 
-IF YOU DO NOT HAVE DRUSH INSTALLED, scripts/bot_start.php is a simple wrapper
-around Drupal and the IRC network libraries. To run the bot, move to the
-scripts directory and issue the following command:
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
-  php bot_start.php --root /path/to/drupal --url http://www.example.com
+### Prerequisites
 
---root refers to the full path to your Drupal installation directory and
-allows you to execute bot_start.php without moving it to the root directory.
---url is required (and is equivalent to Drupal's base URL) to trick Drupal
-into thinking that it is being run as through a web browser. It sets all
-the required Drupal environment variables.
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-If you want to run the bot as a background process, try:
+### Installation
 
-  nohup php bot_start.php --root /path/to/drupal --url http://www.example.com &
+_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/your_username_/Project-Name.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your API in `config.js`
+   ```js
+   const API_KEY = 'ENTER YOUR API';
+   ```
 
-USING THE BOT
--------------
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Your bot is now started and is trying to connect.
 
-Once your bot is connected, you can query it for more information:
 
-   <Morbus> YOUR_BOTNAME: help
+<!-- USAGE EXAMPLES -->
+## Usage
 
-   <YOUR_BOTNAME>: Detailed information is available by asking for
-     "help <feature>" where <feature> is one of: Botagotchi, Drupal URLs,
-     Factoids, Seen.
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-   <Morbus> YOUR_BOTNAME: help Seen
+_For more examples, please refer to the [Documentation](https://example.com)_
 
-   <YOUR_BOTNAME> If someone asks "seen Morbus", the bot will report the
-     last time they've been seen, where, and what their last known message
-     was. Directly addressing the bot will also allow the more complex
-     syntax of "seen Morbus? seen d8uv?", "have you seen sbp?" and similar
-     forms. * can be used as a wildcard, but only with a minimum of three
-     other characters. A maximum of three results are displayed for any
-     one request.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-You can also go to http://www.SITENAME.com/bot/ for a web-based version
-of all the feature help available through the IRC syntax above.
 
 
-IRC MESSAGE HOOKS
------------------
+<!-- ROADMAP -->
+## Roadmap
 
-The following message types are supported by Net_SmartIRC:
+- [x] Add Changelog
+- [x] Add back to top links
+- [ ] Add Additional Templates w/ Examples
+- [ ] Add "components" document to easily copy & paste sections of the readme
+- [ ] Multi-language Support
+    - [ ] Chinese
+    - [ ] Spanish
 
-  UNKNOWN     CHANNEL  QUERY     CTCP         NOTICE        WHO
-  JOIN        INVITE   ACTION    TOPICCHANGE  NICKCHANGE    KICK
-  QUIT        LOGIN    INFO      LIST         NAME          MOTD
-  MODECHANGE  PART     ERROR     BANLIST      TOPIC         NONRELEVANT
-  WHOIS       WHOWAS   USERMODE  CHANNELMODE  CTCP_REQUEST  CTCP_REPLY
+See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
-A module may create a function in the form of:
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-  MODULENAME_irc_msg_MESSAGETYPE
 
-such that a module named "bot_example" could respond or act upon all channel
-messages with a function called bot_example_irc_msg_channel(). Passed to
-this function is $data, an object reference that contains the message, who
-said it, in what channel, and more.
 
-Modules can respond to the user or channel with bot_message($to, $message),
-where $to is either a channel name ("#drupal") or user ("Morbus"). Other
-IRC actions are demonstrated in the modules shipped with this package. In a
-worse case scenario (ie., there's no helper function in bot.module that will
-accomplish your desired tasks), you can use "global $irc;" to get the actual
-Net_SmartIRC object that represents the IRC connection. Under the most ideal
-conditions, you'd contribute back a patch to bot.module that'd let you
-accomplish your needs without using the $irc global. Generally speaking,
-try not to use the $irc global.
+<!-- CONTRIBUTING -->
+## Contributing
 
-There is another hook available called irc_bot_reply_message (such that, in
-our above example, it'd be bot_example_irc_bot_reply_message()). This function
-allows you to act whenever the bot sends a message. This was added primarily
-to allow us to log bot responses in bot_log.module. If you use this, be sure
-NOT to use bot_message() within your implementation, else you'll cause an
-infinite loop. Another hook, irc_bot_reply_action, does the same for actions.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
 
-OTHER IRC HOOKS
----------------
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Another hook of interest is irc_bot_cron, which is run every five minutes.
-This is very similar to Drupal's own hook_cron, but is intended only for
-bot-related operations (though, naturally, any hook_cron you add to your
-own bot plugins will function as expected). irc_bot_cron_faster (one minute)
-and irc_bot_cron_fastest (15 seconds) are also available.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-In addition to the actual utility of your module, you also should add a
-few lines describing how to use your module. This is done via Drupal's
-hook_help(), and the use of two special strings:
 
- irc:features
-   Returns an array of feature names your modules provides.
 
- irc:features#FEATURE_NAME
-   Returns an explanation of a specific feature of your module.
+<!-- LICENSE -->
+## License
 
-FEATURE_NAME will be lowercased, trimmed of whitespace, and anything not a
-letter or number will be turned into an underscore. For an example in code,
-take a look at the shipped bot_project.module. This information is provided
-by the bot under the following conditions:
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-  <Morbus> bot_module: help
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-  <bot_module> Detailed information is available by asking for
-    "help <feature>" where <feature> is one of:
-    Project URLs, dns, karma.
 
-  <Morbus> bot_module: help Project URLs
 
-  <bot_module> Displays the title of project URLs ...
+<!-- CONTACT -->
+## Contact
 
-hook_irc_bot_access() allows you to control whether a particular message
-should be delivered to the other bot hooks at all: it receives $irc and $data
-for analysis and, should it return FALSE, the incoming message is not sent
-to the normal list of IRC Message Hooks as defined above.
+Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
+Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
-DESIGN DECISIONS
-----------------
+<p align="right">(<a href="#top">back to top</a>)</p>
 
- * We do not enforce command prefixes such as !.
 
- * We do not enforce direct addressing like "botname: <command>".
 
-Since the entire raw IRC message is passed off to each module, you are more
-than welcome to enforce either of the above in your own code. Note that you
-WILL have to insure that "botname: <command>" and simply "<command>" both do
-as you'd expect - we do not remove "botname:" from the start of messages (and
-thus a simple test of "^command$" will fail if the bot is addressed). Most
-of our shipped modules cater to these two possibilities.
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
 
-This is an IRC bot... in PHP. PHP is not especially awesome with regards to
-memory management, and it certainly wasn't intended to run a script for any
-respectable period of time (like, say, longer than the default 30 seconds).
-Likewise, there's no way to uninclude a file, so any change to the loaded
-modules (either codewise or enabled/disabled) will require the bot to be
-restarted entirely.
+Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-Love the limitations, and craziness, of this project.
+* [Choose an Open Source License](https://choosealicense.com)
+* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
+* [Malven's Grid Cheatsheet](https://grid.malven.co/)
+* [Img Shields](https://shields.io)
+* [GitHub Pages](https://pages.github.com)
+* [Font Awesome](https://fontawesome.com)
+* [React Icons](https://react-icons.github.io/react-icons/search)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/othneildrew
+[product-screenshot]: images/screenshot.png
