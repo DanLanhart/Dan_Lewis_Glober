@@ -1,0 +1,151 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin:0 auto;
+    max-width: 1850px;
+    overflow: hidden;
+}
+
+div.testing1{
+    position: absolute;
+}
+
+#map {
+    position: relative;
+    z-index: 0;
+    bottom: 0;
+    top: -340px;
+    right: 40px;
+    float: right;
+    height: 30%;
+    width: 28%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-width: 0px;
+    opacity: 0.3;
+}
+
+#map:hover {
+    transform: scale(1.25);
+    right: 98px;
+    top: -375px;
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#pano {
+    position: relative;
+    right: 0;
+    z-index: 0;
+    float: left;
+    height: 825px;
+    width: 1850px;
+    border-radius: 10px;
+}
+
+
+#result{
+    position: absolute;
+    z-index: 0;
+    right: 385px;
+    top: 170px;
+    height: 61%;
+    width: 100%;
+    border-radius: 25px;
+    border-left-width: 0;
+}
+
+#location, #distance, #totaldistance{
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+#location, #distance {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+
+#check, #next{
+    font-size: 13px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    width: 200px;
+}
+
+#next{
+    position: relative;
+    top: -308px;
+    right: -735px;
+    background: rgb(166,96,58);
+    background: linear-gradient(127deg, rgba(166,96,58,1) 0%, rgba(187,156,50,1) 52%, rgba(159,88,16,1) 100%);
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 15px;
+    border: #4ea63a;
+}
+
+h1{
+    padding-top: 5px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+#next{
+    margin-left: 100px;
+}
+
+
+#center{
+    text-align: center;
+}
+
+#totaldistance{
+    bottom: 0;
+    width: 100%;
+}
+
+#round {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+}
+
+.hide_until_guessed {
+    display: none;
+}
+
+.result_container   {
+    position: relative;
+    top: -230px;
+    right: -287px;
+    width: 1250px;
+    border: 2.5px solid #9f5810;
+    background: white;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 40px;
+    opacity: .9;
+}
+
+#check {
+    position: relative;
+    top: -65px;
+    right: -1030px;
+    background: rgb(78, 166, 58);
+    background: linear-gradient(90deg, rgba(78, 166, 58, 1) 0%, rgba(124, 175, 27, 1) 52%, rgba(16, 159, 20, 1) 100%);
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    border: #4ea63a;
+}
+
+/*
+COLOR PALETTE:
+#ffdb85
+#ffc947
+#82b491
+#6e9f8c
+#5e8c7a
+*/
