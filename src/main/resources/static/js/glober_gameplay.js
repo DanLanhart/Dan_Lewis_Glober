@@ -8,6 +8,8 @@ var accumulated_distance_score = 0;
 var current_name = '';
 var distance_from_guess = [];
 var check_count = 0;
+var maxDistanceInUs = 2892;
+var max_score = 14460;
 
 // This is a world city set that is used for testing
 const world_city_set =[5304391, 3599699, 1857910, 4853608, 323786];
@@ -48,7 +50,7 @@ async function initialize() {
     disableButton('check');
     disableButton('next');
     if(accumulated_distance_score == 0){
-        document.getElementById("totaldistance").innerHTML = 'Total Score: 0 Miles';
+        document.getElementById("totaldistance").innerHTML = 'Total Score: 0 Points';
     }
     document.getElementById("location").innerHTML = ' ';
     document.getElementById("distance").innerHTML = ' ';
@@ -122,7 +124,9 @@ function check(){
     enableButton('next');
     distance_from_guess = [];
     var guess_error = (distance(guess_coordinates[0],guess_coordinates[1],true_location[0], true_location[1],'K'));
-    accumulated_distance_score += parseFloat(guess_error);
+    var parsed_score = maxDistanceInUs - parseFloat(guess_error);
+    parsed_score = ((parsed_score/maxDistanceInUs) * 100);
+    accumulated_distance_score += parsed_score;
     distance_from_guess = guess_error;
     var true_coords = {lat: true_location[0], lng: true_location[1]};
     var guess_coords = {lat: guess_coordinates[0], lng: guess_coordinates[1]};
@@ -224,8 +228,8 @@ function randomLoc(){
     index += 1
     if (index > return_locations.length -1){
         index = 0
-        document.getElementById("totaldistance").innerHTML = 'Total Score: 0 Miles';
-        if(accumulated_distance_score === 0)  {
+        document.getElementById("totaldistance").innerHTML = 'Total Score: 0 Points';
+        if(accumulated_distance_score === 14460)  {
             swal({
                 title: "Thanks For Playing!",
                 icon: "success",
@@ -235,7 +239,10 @@ function randomLoc(){
         swal({
             title: "Thanks For Playing!",
             icon: "success",
-            text: "Total Score: " + accumulated_distance_score.toFixed(1) + " Points!"
+            text: "Total Score: " + accumulated_distance_score.toFixed(1) + "/500 Points!",
+            button: {
+                text: "New Game",
+            },
         });
         accumulated_distance_score = 0;
         document.getElementById('round').innerHTML = "Round:  1/" + return_locations.length
@@ -257,7 +264,7 @@ function display_location(){
     document.getElementById("location").innerHTML = "Correct Location: " + current_name;
     document.getElementById("distance").innerHTML = "Your Guess was " + distance_from_guess + " Miles away";
     document.getElementById("totaldistance").innerHTML = "Total Score: " + accumulated_distance_score.toFixed
-    (1) + " Miles";
+    (1) + " Points";
 }
 
 function disableButton(id){

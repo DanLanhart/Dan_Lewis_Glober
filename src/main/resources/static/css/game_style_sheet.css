@@ -2,7 +2,7 @@ html, body {
     height: 100%;
     width: 100%;
     margin:0 auto;
-    max-width: 1850px;
+    max-width: 1920px;
     overflow: hidden;
 }
 
@@ -38,9 +38,10 @@ div.testing1{
     right: 0;
     z-index: 0;
     float: left;
-    height: 825px;
-    width: 1850px;
-    border-radius: 10px;
+    height: 880px;
+    width: 1920px;
+    top: -10px;
+
 }
 
 
@@ -77,8 +78,8 @@ div.testing1{
 
 #next{
     position: relative;
-    top: -308px;
-    right: -735px;
+    top: -338px;
+    right: -765px;
     background: rgb(166,96,58);
     background: linear-gradient(127deg, rgba(166,96,58,1) 0%, rgba(187,156,50,1) 52%, rgba(159,88,16,1) 100%);
     font-family: 'Inter', sans-serif;
@@ -110,7 +111,19 @@ h1{
 #round {
     font-family: 'Inter', sans-serif;
     font-size: 20px;
+    color: black;
+    top: 899px;
+    position: absolute;
+    z-index: 2;
+    height: 35px;
+    width: 145px;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 20px;
+    left: 5px;
 }
+
+
 
 .hide_until_guessed {
     display: none;
@@ -118,8 +131,8 @@ h1{
 
 .result_container   {
     position: relative;
-    top: -230px;
-    right: -287px;
+    top: -260px;
+    right: -317px;
     width: 1250px;
     border: 2.5px solid #9f5810;
     background: white;
@@ -131,8 +144,8 @@ h1{
 
 #check {
     position: relative;
-    top: -65px;
-    right: -1030px;
+    top: -72px;
+    right: -1040px;
     background: rgb(78, 166, 58);
     background: linear-gradient(90deg, rgba(78, 166, 58, 1) 0%, rgba(124, 175, 27, 1) 52%, rgba(16, 159, 20, 1) 100%);
     font-family: 'Inter', sans-serif;
@@ -149,3 +162,89 @@ COLOR PALETTE:
 #6e9f8c
 #5e8c7a
 */
+
+.navbar {
+    background-color: #5e8c7a;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: white;
+    padding-top: 0px;
+}
+
+nav{
+    position: center;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 7px 8px;
+    text-decoration: none;
+}
+
+/* The dropdown container */
+.myasweomedropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.myasweomedropdown .superbutton {
+    font-size: 22px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .myasweomedropdown:hover .superbutton {
+    background-color: #82b491;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown_items {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown_items a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown_items a:hover {
+    background-color: #ffdb85;
+}
+
+/* Show the dropdown menu on hover */
+.myasweomedropdown:hover .dropdown_items {
+    display: block;
+}
+
+.profile_button{
+    font-size: 22px;
+    color: white;
+    padding-right: 10px;
+}
+
+.btn{
+    background-color: #5e8c7a;
+    border-color: #5e8c7a;
+}

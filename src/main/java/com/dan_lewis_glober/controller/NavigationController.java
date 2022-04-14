@@ -26,4 +26,5 @@ public class NavigationController {
     public String about(Model model) {
         return "about_page";
     }
+
 }

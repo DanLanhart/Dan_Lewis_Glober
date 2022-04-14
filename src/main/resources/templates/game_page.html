@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <title> Glober Game Page </title>
@@ -7,15 +7,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/game_style_sheet.css" type="text/css" th:href="@{/style_sheet.css}">
+    <link rel="stylesheet" href="../static/css/game_style_sheet.css" type="text/css" th:href="@{/css/game_style_sheet.css}">
 </head>
 <body style="background-color:#F7FEFB;">
 
-<h1> GLOBER </h1>
+<nav>
+    <div class="navbar px-1 d-flex flex-row" >
+        <div class="myasweomedropdown">
+            <button class="superbutton">MENU
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown_items">
+                <a th:href="@{/index}">HOME</a>
+                <a th:href="@{/play}">PLAY</a>
+                <a th:href="@{/profile}">PROFILE</a>
+                <a th:href="@{/about}">ABOUT</a>
+                <a th:href="@{/showBugReportForm}">REPORT A BUG</a>
+            </div>
+        </div>
+        <div class="glober_title"> GLOBER </div>
+        <a th:href="@{/profile}">PROFILE</a>
+    </div>
+</nav>
 
-    <div id = "round"></div>
+    <div class="text-center" id = "round"></div>
 
     <div id="pano"></div>
+
     <div id="map"></div>
 
     <div id = 'buttons' class="container"  >
@@ -39,9 +57,11 @@
     </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="glober_gameplay.js" type="text/javascript"></script>
-<script type='text/javascript' src='config.js'></script>
+
+<script src="../static/js/glober_gameplay.js" type="text/javascript" th:src="@{/js/glober_gameplay.js}"></script>
+
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhzg8Scjd0qVKXJpXMzIf2fVm2eehJDLI&callback=initialize">
 </script>
