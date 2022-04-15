@@ -2,3 +2,7 @@ Daily Updates:
 
 - (4/13) I finished implementing Spring Security for my player models and the player remains active until logging out. I've also used the player persistence to start the
 player profile page. My goal for tomorrow is to complete all of the backend wiring for my remaining models.
+
+- 4/14: I was able to get my js working with my game page using thymeleaf syntax. I also added a navigation bar to the game page so users can travel out easier. In 
+addition, I engineered a new calculation formula for the scoring system so that players are now rewarded with points instead of being burdened with them. Finally, I 
+re-organized my package structure to optimize my compatability with thymeleaf.
