@@ -36,10 +36,12 @@ public class PlayerController {
     }
 
     @GetMapping("/showFormForUpdate/{id}")
-    public String showFormForUpdate(@PathVariable(value="id") long id, Model model)   {
-        // get player from the service
+    public String showFormForUpdate(@PathVariable(value = "id") long id, Model model) {
+
+        // get employee from the service
         Player player = playerService.getPlayerById(id);
-        // set player as a model attribute to pre-populate the form
+
+        // set employee as a model attribute to pre-populate the form
         model.addAttribute("player", player);
         return "update_player";
     }

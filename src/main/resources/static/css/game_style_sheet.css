@@ -183,12 +183,14 @@ nav{
     text-align: center;
     padding: 7px 8px;
     text-decoration: none;
+    z-index: 2;
 }
 
 /* The dropdown container */
 .myasweomedropdown {
     float: left;
     overflow: hidden;
+    z-index: 2;
 }
 
 /* Dropdown button */
@@ -201,11 +203,13 @@ nav{
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
+    z-index: 2;
 }
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .myasweomedropdown:hover .superbutton {
     background-color: #82b491;
+    z-index: 2;
 }
 
 /* Dropdown content (hidden by default) */
@@ -215,7 +219,7 @@ nav{
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Links inside the dropdown */
@@ -226,6 +230,7 @@ nav{
     text-decoration: none;
     display: block;
     text-align: left;
+    z-index: 2;
 }
 
 /* Add a grey background color to dropdown links on hover */

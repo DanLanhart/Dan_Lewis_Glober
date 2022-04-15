@@ -23,6 +23,7 @@ public class ProfileController {
         model.addAttribute("username", player.getUsername());
         model.addAttribute("firstName", player.getFirstName());
         model.addAttribute("email", player.getEmail());
+        model.addAttribute("player", player);
         return "player_profile_page";
     }
 }

@@ -8,13 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class NavigationController {
 
     @GetMapping("/index")
-    public String howToPlay(Model model) {
-        return "index";
-    }
-
-    @GetMapping("/landing")
     public String landingPage(Model model)  {
-        return "/landing_page";
+        return "index";
     }
 
     @GetMapping("/play")
