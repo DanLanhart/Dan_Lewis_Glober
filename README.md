@@ -10,7 +10,7 @@ Navigation Links
 
 ## Daily Progress Updates
 - April 18, 2022 (80% Complete)  
-- - This is a sub cat test
+  - This is a sub cat test
 
 
 Daily Updates:
