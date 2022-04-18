@@ -16,20 +16,43 @@ Navigation Links
 ##### (organized by site pages)
 
 ### Registration Page
+- As a user, I want to have registration functionality, so that I can create an account with the application.
+- As a user, I want to enter my information and have it associated with my account (name, username, email, password), so that I can create an account with my information.
+- As a user, I want the registration form to perform checks on the email and password fields, so that I enter the correct information.
+- As a user, I want my password to be encrypted in the database, so that my information is safely secured/stored.
 
 ### Login Page
-- As a user I want to login
+- As a user, I want login functionality, so that I can use the application with the account I've created.
+- As a user, I want the login page to check my entered information, so that I login using the correct credentials.
 
 ### Home Page
+- As a user, I want a navigation bar/menu across all pages, so that I can easily navigate throughout the app.
+- As a user, I want a home page (landing page/index), so that I have a central hub within the app.
 
 ### Game Page
+- As a user, I want a navigation bar/menu across all pages, so that I can easily navigate throughout the app.
+- As a user, I want to be presented with a google panoramic/street view of a random location within the USA, so that I can figure out where the location is.
+- As a user, I want a "guessing" map with marker functionality, so that I can select the location I have determined I am in within the USA.
+- As a user, I want to be shown a results display that shows how far away my guess location was from the actual, so that I can view my results.
+- As a user, I want to be given points associated with how far away from the actual location my choice was, so that I can view how well I did.
+- As a user, I want to given 5 different locations and a maximum score of 500 points (100 points per location), so that I can have multiple attempts at guessing.
+- As a user, I want my points to be added up and displayed at the end of the 5 rounds, so that I can view my total score.
 
 ### Profile Page
+- As a user, I want a navigation bar/menu across all pages, so that I can easily navigate throughout the app.
+- As a user, I want to view my current username, name, and email, so that I can verify my information.
+- As a user, I want the option to update my name and username, so that I can manipulate my information.
+- As a user, I want to view the scores of my last games, so that I can gauge my skills at the game.
 
 ### About Page
+- As a user, I want a navigation bar/menu across all pages, so that I can easily navigate throughout the app.
+- As a user, I want to know some information about the application, so that I can have a better understanding of the project.
+- As a user, I want to see a "how to play" section, so I can learn how the game functions.
+- As a user, I want to see a list of all available locations, so that I can see all the possible options of locations within the game.
 
 ### Report A Bug Page
-
+- As a user, I want a navigation bar/menu across all pages, so that I can easily navigate throughout the app.
+- As a user, I want the functionality to report any bugs/issues I find on the application, so that I can help improve the application.
 
 ## Technical Architecture
 
