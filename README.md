@@ -13,7 +13,7 @@ Navigation Links
   - This is a sub cat test
 
 ## User Stories
-##### Organized by site pages:
+##### (organized by site pages)
 ### Login Page
 - As a user I want to login
 
