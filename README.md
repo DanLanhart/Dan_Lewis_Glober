@@ -8,6 +8,9 @@ Navigation Links
 - [Datebase Schema](#Datebase-Schema)
 - [Technical Challenges](#Technical-Challenges)
 
+## Daily Progress Updates
+- April 18, 2022 (80% Complete)
+
 
 Daily Updates:
 
