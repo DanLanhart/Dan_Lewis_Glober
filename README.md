@@ -1,7 +1,12 @@
 ## Glober - Geographic Location Based Game
 
+Navigation Links
 - [Daily Progress Updates](#Daily-Progress)
-- 
+- [User Stories](#User-Stories)
+- [Technical Architecture](#Technical-Architecture)
+- [Wire Frame](#Wire-Frame)
+- [Datebase Schema](#Datebase-Schema)
+- [Technical Challenges](#Technical-Challenges)
 
 
 Daily Updates:
