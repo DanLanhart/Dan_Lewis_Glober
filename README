@@ -1,3 +1,7 @@
+## Glober - Geographic Location Based Game
+
+
+
 Daily Updates:
 
 - (4/13) I finished implementing Spring Security for my player models and the player remains active until logging out. I've also used the player persistence to start the
