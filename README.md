@@ -1,6 +1,6 @@
 ## Glober - Geographic Location Based Game
 
-- [Daily Progress Updates] (#Daily-Progress)
+- [Daily Progress Updates](#Daily-Progress)
 - 
 
 
