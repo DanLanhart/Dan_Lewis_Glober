@@ -14,8 +14,21 @@ Navigation Links
 
 ## User Stories
 ##### (organized by site pages)
+
+### Registration Page
+
 ### Login Page
 - As a user I want to login
+
+### Home Page
+
+### Game Page
+
+### Profile Page
+
+### About Page
+
+### Report A Bug Page
 
 
 ## Technical Architecture
