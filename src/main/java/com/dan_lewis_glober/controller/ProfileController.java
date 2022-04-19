@@ -38,8 +38,20 @@ public class ProfileController {
         return "player_profile_page";
     }
 
-    @GetMapping("/showChatForm")
-    public String showChatForm(Model model)   {
+    // Grab username from the current user
+    // Display the current user on the chat form
+    // Have the chat message displayed with which user wrote it
+    // Have many chats be associated with one user
+
+
+    @GetMapping("/chatForm")
+    public String showChatForm(Model model, Principal principal)   {
+        Player player = playerRepository.findByEmail(principal.getName());
+        model.addAttribute("username", player.getUsername());
+        model.addAttribute("firstName", player.getFirstName());
+        model.addAttribute("email", player.getEmail());
+        model.addAttribute("password", player.getPassword());
+        model.addAttribute("player", player);
         // create model attribute to bind from data
         Chat chat = new Chat();
         model.addAttribute("chat", chat);
@@ -48,9 +60,8 @@ public class ProfileController {
 
     @PostMapping("/saveChat")
     public String saveChat(@ModelAttribute("chat") Chat chat) {
-        // save bug report to database
+        // save chat to database
         chatService.saveChat(chat);
         return "redirect:/profile";
     }
-
 }

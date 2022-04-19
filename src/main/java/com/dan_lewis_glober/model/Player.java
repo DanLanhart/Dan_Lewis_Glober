@@ -4,6 +4,7 @@ import com.dan_lewis_glober.security.Role;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
@@ -27,6 +28,9 @@ public class Player {
                     name = "role_id", referencedColumnName = "id"))
 
     private Collection<Role> roles;
+
+    @OneToMany(mappedBy = "player", targetEntity = Chat.class, fetch = FetchType.LAZY, cascade = {CascadeType.ALL})
+    private List<Chat> chat;
 
     public Player() {
     }
@@ -104,5 +108,13 @@ public class Player {
                 ", password='" + "*********" + '\'' +
                 ", roles=" + roles +
                 '}';
+    }
+
+    public List<Chat> getChat() {
+        return chat;
+    }
+
+    public void setChat(List<Chat> chat) {
+        this.chat = chat;
     }
 }

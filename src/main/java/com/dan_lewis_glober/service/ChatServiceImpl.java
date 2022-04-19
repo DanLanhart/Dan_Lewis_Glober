@@ -1,8 +1,10 @@
 package com.dan_lewis_glober.service;
 
 import com.dan_lewis_glober.model.Chat;
+import com.dan_lewis_glober.model.Player;
 import com.dan_lewis_glober.repository.ChatRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,4 +22,9 @@ public class ChatServiceImpl implements ChatService{
 
     @Override
     public void saveChat(Chat chat) {this.chatRepository.save(chat);}
+
+    @Override
+    public List<Chat> findPlayerById(Long id) {
+        return chatRepository.findPlayerById(id);
+    }
 }
