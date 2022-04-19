@@ -24,7 +24,7 @@ public class ChatServiceImpl implements ChatService{
     public void saveChat(Chat chat) {this.chatRepository.save(chat);}
 
     @Override
-    public List<Chat> findPlayerById(Long id) {
+    public List<Chat> findChatByPlayerId(Long id) {
         return chatRepository.findPlayerById(id);
     }
 }

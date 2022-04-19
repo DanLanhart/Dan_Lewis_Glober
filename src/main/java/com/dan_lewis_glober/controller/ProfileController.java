@@ -5,11 +5,13 @@ import com.dan_lewis_glober.model.Chat;
 import com.dan_lewis_glober.model.Player;
 import com.dan_lewis_glober.repository.PlayerRepository;
 import com.dan_lewis_glober.service.ChatService;
+import com.dan_lewis_glober.service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.security.Principal;
@@ -17,18 +19,19 @@ import java.security.Principal;
 @Controller
 public class ProfileController {
 
-    private PlayerRepository playerRepository;
+    private PlayerService playerService;
 
     @Autowired
     private ChatService chatService;
 
-    public ProfileController(PlayerRepository playerRepository) {
-        this.playerRepository = playerRepository;
+    @Autowired
+    public ProfileController(PlayerService playerService) {
+        this.playerService = playerService;
     }
 
     @GetMapping("/profile")
     public String greeting(Principal principal, Model model) {
-        Player player = playerRepository.findByEmail(principal.getName());
+        Player player = playerService.findByEmail(principal.getName());
         model.addAttribute("username", player.getUsername());
         model.addAttribute("firstName", player.getFirstName());
         model.addAttribute("email", player.getEmail());
@@ -38,30 +41,27 @@ public class ProfileController {
         return "player_profile_page";
     }
 
-    // Grab username from the current user
-    // Display the current user on the chat form
-    // Have the chat message displayed with which user wrote it
-    // Have many chats be associated with one user
-
-
     @GetMapping("/chatForm")
     public String showChatForm(Model model, Principal principal)   {
-        Player player = playerRepository.findByEmail(principal.getName());
+        Player player = playerService.findByEmail(principal.getName());
         model.addAttribute("username", player.getUsername());
-        model.addAttribute("firstName", player.getFirstName());
         model.addAttribute("email", player.getEmail());
-        model.addAttribute("password", player.getPassword());
-        model.addAttribute("player", player);
         // create model attribute to bind from data
         Chat chat = new Chat();
+        chat.setPlayer(player);
         model.addAttribute("chat", chat);
         return "chat_page";
     }
 
-    @PostMapping("/saveChat")
-    public String saveChat(@ModelAttribute("chat") Chat chat) {
+    @PostMapping("/saveChat/{email}")
+    public String saveChat(@PathVariable String email, @ModelAttribute("chat") Chat chat) {
+        System.out.println(email + " " + chat.getMessage());
         // save chat to database
+        Player player = playerService.findByEmail(email);
+        player.getChat().add(chat);
+        chat.setPlayer(player);
         chatService.saveChat(chat);
+        playerService.savePlayer(player);
         return "redirect:/profile";
     }
 }

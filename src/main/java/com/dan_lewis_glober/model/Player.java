@@ -29,7 +29,7 @@ public class Player {
 
     private Collection<Role> roles;
 
-    @OneToMany(mappedBy = "player", targetEntity = Chat.class, fetch = FetchType.LAZY, cascade = {CascadeType.ALL})
+    @OneToMany(targetEntity = Chat.class, fetch = FetchType.LAZY, cascade = {CascadeType.ALL})
     private List<Chat> chat;
 
     public Player() {
