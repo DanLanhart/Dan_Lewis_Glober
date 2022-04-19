@@ -10,6 +10,9 @@ Navigation Links
 
 ## Daily Progress Updates
 
+- April 19, 2022 (90% Complete)
+  - Difficult difficult day. I started with scrapping the score idea as many users on StacOverflow advised me against attempting to send data from JS to my Spring controller. With the help of my coworkers, I was able to figure out how to create chat functionality so that a user could write a chat message and see what all other users have also written in the chat. In addition, I've added my schema visual and wireframe visual to my project. I've also began completing the three required custom queries inside of my service/repository classes. For the rest of the week, I need to get working on my testing methods.
+
 - April 18, 2022 (85% Complete)  
   - Today I completed my custom exception for handling players not found by id, when invalid. I also organized my package/class structure to fit the requirments. In addition, I've added my wireframe to the project files. The current challenge I'm facing is getting variable data handled in JavaScript over to the Spring Controller so that I can display score history on the player's profile. Lastly, I updated my README file to fit the requirments.
 
