@@ -1,4 +1,4 @@
-package com.dan_lewis_glober.TESTsecurity;
+package com.dan_lewis_glober.security;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

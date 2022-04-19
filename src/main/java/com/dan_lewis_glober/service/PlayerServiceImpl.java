@@ -1,6 +1,10 @@
-package com.dan_lewis_glober.TESTsecurity;
+package com.dan_lewis_glober.service;
 
-import com.dan_lewis_glober.TESTsecurity.*;
+import com.dan_lewis_glober.model.Player;
+import com.dan_lewis_glober.repository.PlayerRepository;
+import com.dan_lewis_glober.security.PlayerRegistrationDto;
+import com.dan_lewis_glober.security.Role;
+import com.dan_lewis_glober.service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

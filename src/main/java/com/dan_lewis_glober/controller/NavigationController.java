@@ -17,9 +17,9 @@ public class NavigationController {
         return "game_page";
     }
 
-    @GetMapping("/about")
+/*    @GetMapping("/about")
     public String about(Model model) {
         return "about_page";
-    }
+    }*/
 
 }

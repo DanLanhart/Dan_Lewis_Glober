@@ -21,6 +21,8 @@
 
             <!-- Add hidden field top handle update -->
             <input type="hidden" th:field="*{id}" />
+            <input type="hidden" th:field="*{password}" />
+            <input type="hidden" th:field="*{email}" />
 
             First Name
             <input type="text" th:field="*{firstName}" class="form-control mb-4 col-4" placeholder="Enter first name">
@@ -28,10 +30,7 @@
             Username
             <input type="text" th:field="*{username}" class="form-control mb-4 col-4" placeholder="Enter username">
 
-            Email
-            <input type="text" th:field="*{email}" class="form-control mb-4 col-4" placeholder="Enter email">
-
-            <button type="submit" class="btn btn-info col-2"> Update Profile</button>
+            <button type="submit" class="btn btn-success col-2"> Save Changes</button>
         </form>
         <hr>
     </div>

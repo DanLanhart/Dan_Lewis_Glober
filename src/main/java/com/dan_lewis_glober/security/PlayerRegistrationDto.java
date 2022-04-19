@@ -1,6 +1,4 @@
-package com.dan_lewis_glober.TESTsecurity;
-
-import com.dan_lewis_glober.TESTsecurity.FieldMatch;
+package com.dan_lewis_glober.security;
 
 import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Email;

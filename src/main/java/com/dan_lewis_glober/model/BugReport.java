@@ -1,6 +1,5 @@
 package com.dan_lewis_glober.model;
 
-
 import javax.persistence.*;
 
 @Entity

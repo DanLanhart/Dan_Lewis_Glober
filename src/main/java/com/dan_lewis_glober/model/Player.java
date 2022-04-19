@@ -1,4 +1,6 @@
-package com.dan_lewis_glober.TESTsecurity;
+package com.dan_lewis_glober.model;
+
+import com.dan_lewis_glober.security.Role;
 
 import javax.persistence.*;
 import java.util.Collection;

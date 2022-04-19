@@ -1,5 +1,6 @@
-package com.dan_lewis_glober.TESTsecurity;
+package com.dan_lewis_glober.security;
 
+import com.dan_lewis_glober.service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

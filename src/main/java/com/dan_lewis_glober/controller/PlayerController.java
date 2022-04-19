@@ -1,7 +1,8 @@
 package com.dan_lewis_glober.controller;
 
-import com.dan_lewis_glober.TESTsecurity.Player;
-import com.dan_lewis_glober.TESTsecurity.PlayerService;
+import com.dan_lewis_glober.exceptions.PlayerNotFoundException;
+import com.dan_lewis_glober.model.Player;
+import com.dan_lewis_glober.service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -38,11 +39,17 @@ public class PlayerController {
     @GetMapping("/showFormForUpdate/{id}")
     public String showFormForUpdate(@PathVariable(value = "id") long id, Model model) {
 
-        // get employee from the service
-        Player player = playerService.getPlayerById(id);
-
+        try {
+            // get employee from the service
+            Player player = playerService.getPlayerById(id);
+            if(player == null) {
+                throw new PlayerNotFoundException();
+            }
+            model.addAttribute("player", player);
+        } catch (PlayerNotFoundException e) {
+            return "redirect:/";
+        }
         // set employee as a model attribute to pre-populate the form
-        model.addAttribute("player", player);
         return "update_player";
     }
 

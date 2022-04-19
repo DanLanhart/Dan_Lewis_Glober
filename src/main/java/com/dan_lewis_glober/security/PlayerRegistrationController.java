@@ -1,5 +1,7 @@
-package com.dan_lewis_glober.TESTsecurity;
+package com.dan_lewis_glober.security;
 
+import com.dan_lewis_glober.model.Player;
+import com.dan_lewis_glober.service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

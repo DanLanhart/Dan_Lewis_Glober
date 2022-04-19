@@ -1,7 +1,7 @@
-package com.dan_lewis_glober.TESTsecurity;
+package com.dan_lewis_glober.service;
 
-import com.dan_lewis_glober.TESTsecurity.Player;
-import com.dan_lewis_glober.TESTsecurity.PlayerRegistrationDto;
+import com.dan_lewis_glober.model.Player;
+import com.dan_lewis_glober.security.PlayerRegistrationDto;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 import java.util.List;
