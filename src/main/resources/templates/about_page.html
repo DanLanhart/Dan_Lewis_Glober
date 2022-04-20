@@ -33,8 +33,85 @@
     </div>
 </nav>
 
+
+<div class="container my-3">
+<br><h2 class="text-center">Welcome to Glober</h2>
+    <p class="text-center"><strong>Glober is a fullstack software engineering capstone project created by Dan Lewis with the purpose
+        of applying all skills learned during the TEKSystems/Optum Rising Talent Technical Development program to create a
+        functional product. The purpose of Glober is to provide players with a geographical gaming experience where the
+        player is placed in a random location within the United States and has to use logical reasoning to guess where on
+        a map they are. Players are then given points based on how far away their guess is compared to the actual "target"
+        location. The player is presented with five rounds of game play, and once finished with all rounds, they are given
+        a final performance score. In addition to the main game, Glober offers registration/login functionality for players
+        to create and use their own personal account. Player's also have the capability of communicating with other players
+        on the chat board that can be found in the player's profile page. Finally, players have the option to report any
+        bugs found within the application that can be accessed by the administrator in order to provide feedback for
+        continuous improvement.</strong></p>
+</div><br>
+
+    <h2 class="text-center">How To Play</h2><br>
+<div class="text-center">
+    <img th:src="@{images/HTP1.png}"/>
+    <img th:src="@{images/HTP2.png}"/>
+    <img th:src="@{images/HTP3.png}"/>
+    <img th:src="@{images/HTP4.png}"/>
+    <img th:src="@{images/HTP5.png}"/>
+</div>
+
+<hr><br><h2 class="text-center">GitHub Link</h2>
+<div class="col-md-12 text-center">
+    <a class="text-center" href="https://github.com/DanLanhart/Dan_Lewis_Glober">
+        github.com/DanLanhart/Dan_Lewis_Glober</a>
+</div><br>
+
+<br><hr><h2 class="text-center">Technology Used</h2>
+<div class="text-center">
+        <img th:src="@{images/TechStack.png}"/><br><br>
+
+    <hr><h2 class="text-center">User Stories</h2>
+    <h5>Registration Page</h5>
+    <p>As a user, I want to have registration functionality, so that I can create an account with the application.</p>
+    <p>As a user, I want to enter my information and have it associated with my account (name, username, email, password), so that I can create an account with my information.</p>
+    <p>As a user, I want the registration form to perform checks on the email and password fields, so that I enter the correct information.</p>
+    <p>As a user, I want my password to be encrypted in the database, so that my information is safely secured/stored.</p>
+
+    <h5>Login Page</h5>
+    <p>As a user, I want login functionality, so that I can use the application with the account I've created.</p>
+    <p>As a user, I want the login page to check my entered information, so that I login using the correct credentials.</p>
+
+    <h5>Home Page</h5>
+    <p>As a user, I want a navigation bar/menu across all pages, so that I can easily navigate throughout the app.</p>
+    <p>As a user, I want a home page (landing page/index), so that I have a central hub within the app.</p>
+
+    <h5>Game Page</h5>
+    <p>As a user, I want a navigation bar/menu across all pages, so that I can easily navigate throughout the app.</p>
+    <p>As a user, I want to be presented with a google panoramic/street view of a random location within the USA, so that I can figure out where the location is.</p>
+    <p>As a user, I want a "guessing" map with marker functionality, so that I can select the location I have determined I am in within the USA.</p>
+    <p>As a user, I want to be shown a results display that shows how far away my guess location was from the actual, so that I can view my results.</p>
+    <p>As a user, I want to be given points associated with how far away from the actual location my choice was, so that I can view how well I did.</p>
+    <p>As a user, I want to given 5 different locations and a maximum score of 500 points (100 points per location), so that I can have multiple attempts at guessing.</p>
+    <p>As a user, I want my points to be added up and displayed at the end of the 5 rounds, so that I can view my total score.</p>
+
+    <h5>Profile Page</h5>
+    <p>As a user, I want a navigation bar/menu across all pages, so that I can easily navigate throughout the app.</p>
+    <p>As a user, I want to view my current username, name, and email, so that I can verify my information.</p>
+    <p>As a user, I want the option to update my name and username, so that I can manipulate my information.</p>
+    <p>As a user, I want to view the scores of my last games, so that I can gauge my skills at the game.</p>
+
+    <h5>About Page</h5>
+    <p>As a user, I want a navigation bar/menu across all pages, so that I can easily navigate throughout the app.</p>
+    <p>As a user, I want to know some information about the application, so that I can have a better understanding of the project.</p>
+    <p>As a user, I want to see a "how to play" section, so I can learn how the game functions.</p>
+    <p>As a user, I want to see a list of all available locations, so that I can see all the possible options of locations within the game.</p>
+
+    <h5>Report a Bug Page</h5>
+    <p>As a user, I want a navigation bar/menu across all pages, so that I can easily navigate throughout the app.</p>
+    <p>As a user, I want the functionality to report any bugs/issues I find on the application, so that I can help improve the application.</p>
+    <br>
+</div>
+
 <div class="container my-2">
-    <h2>Available Locations</h2>
+    <h2 class="text-center">Available Locations (Sorted by City)</h2>
     <table border="1" class="table table-striped table-responsive-md">
         <thead>
         <tr>
@@ -44,7 +121,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="location : ${listLocations}">
+        <tr th:each="location : ${sortedLocations}">
             <td th:text="${location.city}"></td>
             <td th:text="${location.state}"></td>
             <td th:text="${location.city_code}"></td>
