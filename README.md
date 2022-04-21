@@ -10,6 +10,9 @@ Navigation Links
 
 ## Daily Progress Updates
 
+- April 20, 2022 (95% Complete)
+  - I completed all front-end components of my project to meet requirements. I also completed my default SQL page to autofill my database tables with information. I feel that my application is complete as far as frontend/backend goes. I just have to implement my testing methods and I should be ready to submit before the weekend!
+
 - April 19, 2022 (90% Complete)
   - Difficult difficult day. I started with scrapping the score idea as many users on StacOverflow advised me against attempting to send data from JS to my Spring controller. With the help of my coworkers, I was able to figure out how to create chat functionality so that a user could write a chat message and see what all other users have also written in the chat. In addition, I've added my schema visual and wireframe visual to my project. I've also began completing the three required custom queries inside of my service/repository classes. For the rest of the week, I need to get working on my testing methods.
 
