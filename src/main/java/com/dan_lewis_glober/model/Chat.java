@@ -18,6 +18,14 @@ public class Chat {
     @Column(name = "message")
     private String message;
 
+    public Chat(long id, Player player, String message){
+        this.player = player;
+        this.id = id;
+        this.message = message;
+    }
+
+    public Chat(){}
+
     public String getUsername() {
         return player.getUsername();
     }
