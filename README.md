@@ -10,6 +10,9 @@ Navigation Links
 
 ## Daily Progress Updates
 
+- April 21, 2022 (98% Complete)
+  - Today I completed all my service method testing code as well as began on creating my parameterized test and my custom queries tests. I should be 100% complete with my project tomorrow (4/22) and will then create a slide presentation for the following week.
+
 - April 20, 2022 (95% Complete)
   - I completed all front-end components of my project to meet requirements. I also completed my default SQL page to autofill my database tables with information. I feel that my application is complete as far as frontend/backend goes. I just have to implement my testing methods and I should be ready to submit before the weekend!
 
