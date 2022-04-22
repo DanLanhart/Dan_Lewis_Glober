@@ -8,6 +8,9 @@ Navigation Links
 - [Datebase Schema](#Datebase-Schema)
 - [Technical Challenges](#Technical-Challenges)
 
+“Contact Sang Shin to access this document”
+Case Study Rubrics (Dan Lewis): https://docs.google.com/document/d/1dP5HtuIvyXUKg4dBFY2B6PE88qoVSBDum55jGSPV6rI/edit
+
 ## Daily Progress Updates
 
 - April 22, 2022 (100% Complete)
