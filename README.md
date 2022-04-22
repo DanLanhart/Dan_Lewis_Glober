@@ -10,6 +10,9 @@ Navigation Links
 
 ## Daily Progress Updates
 
+- April 22, 2022 (100% Complete)
+  - Today I finished adding my testing methods to test my service and repository classes. At this point, all requirements have been completed and I will now spend my time preparing for my presentation as well as stylizing my pages to better fit my overall theme.
+
 - April 21, 2022 (98% Complete)
   - Today I completed all my service method testing code as well as began on creating my parameterized test and my custom queries tests. I should be 100% complete with my project tomorrow (4/22) and will then create a slide presentation for the following week.
 
