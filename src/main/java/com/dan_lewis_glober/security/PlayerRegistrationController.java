@@ -35,7 +35,7 @@ public class PlayerRegistrationController {
         Player existing = playerService.findByEmail(playerDto.getEmail());
         if(existing != null) {
             result.rejectValue
-                    ("email", null, "There is already an account registered to that email");
+                    ("email", null, "There is already a Glober account registered to that email");
         }
         if(result.hasErrors()) {
             return "registration";

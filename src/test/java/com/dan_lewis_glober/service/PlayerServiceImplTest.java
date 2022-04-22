@@ -24,9 +24,9 @@ public class PlayerServiceImplTest {
         int beforeAddingPlayer = allPlayers.size()+1;
 
         Player player = new Player();
-        player.setFirstName("Test");
-        player.setUsername("TestUser");
-        player.setEmail("test@gmail.com");
+        player.setFirstName("Phil");
+        player.setUsername("PhilMaster");
+        player.setEmail("phil@gmail.com");
         player.setPassword("password");
 
         playerService.savePlayer(player);

@@ -1,5 +1,11 @@
 USE glober;
 
+INSERT INTO player
+VALUES('99','test@gmail.com','test','password','testPlayer');
+
+/*This is the default list of locations that are present within the game and are tested inside of the
+LocationServiceImplTest class. The tests associated with this data will FAIL unless these are inserted.*/
+
 INSERT INTO locations
 VALUES ('1','New York', '282809', 'New York'),('2','Los Angeles', '623636', 'California'),('3','Chicago', '207229', 'Illinois'),
        ('4','Houston', '752962', 'Texas'),('5','Phoenix', '099324', 'Arizona'),('6','Philadelphia', '814868', 'Pennsylvania'),
