@@ -76,3 +76,6 @@ re-organized my package structure to optimize my compatability with thymeleaf.
 ### Report A Bug Page
 - As a user, I want a navigation bar/menu across all pages, so that I can easily navigate throughout the app.
 - As a user, I want the functionality to report any bugs/issues I find on the application, so that I can help improve the application.
+
+![TechStack](https://user-images.githubusercontent.com/99348669/164789427-3a031c02-c46b-45ce-bc93-fb57c1f64aeb.png)
+![FuturePlans](https://user-images.githubusercontent.com/99348669/164789454-17c60b65-4017-4d81-bb3b-7d3e664dfa57.png)
