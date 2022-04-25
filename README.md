@@ -8,6 +8,9 @@ Navigation Links
 - [Datebase Schema](#Datebase-Schema)
 - [Technical Challenges](#Technical-Challenges)
 
+## What is Glober?
+# Glober is a geographic game in which players are placed in a random location within the United States, and then have to guess where in the US they are. The application features account creation/login functionality, chat board, bug reporting system, and the main game mechanics. The below documentation highlights the details of Glober.
+
 “Contact Sang Shin to access this document”
 Case Study Rubrics (Dan Lewis): https://docs.google.com/document/d/1dP5HtuIvyXUKg4dBFY2B6PE88qoVSBDum55jGSPV6rI/edit
 
