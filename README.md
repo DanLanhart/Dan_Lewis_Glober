@@ -8,7 +8,16 @@ Navigation Links
 - [Datebase Schema](#Datebase-Schema)
 - [Technical Challenges](#Technical-Challenges)
 
+## What is Glober?
+# Glober is a geographic game in which players are placed in a random location within the United States, and then have to guess where in the US they are. The application features account creation/login functionality, chat board, bug reporting system, and the main game mechanics. The below documentation highlights the details of Glober.
+
+“Contact Sang Shin to access this document”
+Case Study Rubrics (Dan Lewis): https://docs.google.com/document/d/1dP5HtuIvyXUKg4dBFY2B6PE88qoVSBDum55jGSPV6rI/edit
+
 ## Daily Progress Updates
+
+- April 22, 2022 (100% Complete)
+  - Today I finished adding my testing methods to test my service and repository classes. At this point, all requirements have been completed and I will now spend my time preparing for my presentation as well as stylizing my pages to better fit my overall theme.
 
 - April 21, 2022 (98% Complete)
   - Today I completed all my service method testing code as well as began on creating my parameterized test and my custom queries tests. I should be 100% complete with my project tomorrow (4/22) and will then create a slide presentation for the following week.
@@ -22,15 +31,18 @@ Navigation Links
 - April 18, 2022 (85% Complete)  
   - Today I completed my custom exception for handling players not found by id, when invalid. I also organized my package/class structure to fit the requirments. In addition, I've added my wireframe to the project files. The current challenge I'm facing is getting variable data handled in JavaScript over to the Spring Controller so that I can display score history on the player's profile. Lastly, I updated my README file to fit the requirments.
 
-- April 13, 2022  I finished implementing Spring Security for my player models and the player remains active until logging out. I've also used the player persistence to start the
-player profile page. My goal for tomorrow is to complete all of the backend wiring for my remaining models.
+- April 15, 2022 (80% Complete)
+  -  Today I was able to get the landing page linked up with the log in system to display upon logging in. In addition, I also populated the page with all the 
+"fixings" to make it presentable. I also created an update function for the player profile that uses the persistent player in order to avoid messing with other user data.
 
-- 4/14: I was able to get my js working with my game page using thymeleaf syntax. I also added a navigation bar to the game page so users can travel out easier. In 
+- April 14, 2022 (75% Complete)
+  -  I was able to get my js working with my game page using thymeleaf syntax. I also added a navigation bar to the game page so users can travel out easier. In 
 addition, I engineered a new calculation formula for the scoring system so that players are now rewarded with points instead of being burdened with them. Finally, I 
 re-organized my package structure to optimize my compatability with thymeleaf.
 
-- 4/15: Today I was able to get the landing page linked up with the log in system to display upon logging in. In addition, I also populated the page with all the 
-"fixings" to make it presentable. I also created an update function for the player profile that uses the persistent player in order to avoid messing with other user data.
+- April 13, 2022 (70% Complete)  
+  - I finished implementing Spring Security for my player models and the player remains active until logging out. I've also used the player persistence to start the
+player profile page. My goal for tomorrow is to complete all of the backend wiring for my remaining models.
 
 ## User Stories
 ##### (organized by site pages)
@@ -74,27 +86,5 @@ re-organized my package structure to optimize my compatability with thymeleaf.
 - As a user, I want a navigation bar/menu across all pages, so that I can easily navigate throughout the app.
 - As a user, I want the functionality to report any bugs/issues I find on the application, so that I can help improve the application.
 
-## Technical Architecture
-
-
-## Wire Frame
-
-
-## Database Schema
-
-
-## Technical Challenges
-
-
-Daily Updates:
-
-- (4/13) I finished implementing Spring Security for my player models and the player remains active until logging out. I've also used the player persistence to start the
-player profile page. My goal for tomorrow is to complete all of the backend wiring for my remaining models.
-
-- 4/14: I was able to get my js working with my game page using thymeleaf syntax. I also added a navigation bar to the game page so users can travel out easier. In 
-addition, I engineered a new calculation formula for the scoring system so that players are now rewarded with points instead of being burdened with them. Finally, I 
-re-organized my package structure to optimize my compatability with thymeleaf.
-
-- 4/15: Today I was able to get the landing page linked up with the log in system to display upon logging in. In addition, I also populated the page with all the 
-"fixings" to make it presentable. I also created an update function for the player profile that uses the persistent player in order to avoid messing with other user data.
-Overall progress (for meeting requirements): 85%.
+![TechStack](https://user-images.githubusercontent.com/99348669/164789427-3a031c02-c46b-45ce-bc93-fb57c1f64aeb.png)
+![FuturePlans](https://user-images.githubusercontent.com/99348669/164789454-17c60b65-4017-4d81-bb3b-7d3e664dfa57.png)
