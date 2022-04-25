@@ -31,7 +31,7 @@ Case Study Rubrics (Dan Lewis): https://docs.google.com/document/d/1dP5HtuIvyXUK
 - April 18, 2022 (85% Complete)  
   - Today I completed my custom exception for handling players not found by id, when invalid. I also organized my package/class structure to fit the requirments. In addition, I've added my wireframe to the project files. The current challenge I'm facing is getting variable data handled in JavaScript over to the Spring Controller so that I can display score history on the player's profile. Lastly, I updated my README file to fit the requirments.
 
-- April 15, 2022 (70% Complete)
+- April 15, 2022 (80% Complete)
   -  Today I was able to get the landing page linked up with the log in system to display upon logging in. In addition, I also populated the page with all the 
 "fixings" to make it presentable. I also created an update function for the player profile that uses the persistent player in order to avoid messing with other user data.
 
@@ -40,7 +40,7 @@ Case Study Rubrics (Dan Lewis): https://docs.google.com/document/d/1dP5HtuIvyXUK
 addition, I engineered a new calculation formula for the scoring system so that players are now rewarded with points instead of being burdened with them. Finally, I 
 re-organized my package structure to optimize my compatability with thymeleaf.
 
-- April 13, 2022 (80% Complete)  
+- April 13, 2022 (70% Complete)  
   - I finished implementing Spring Security for my player models and the player remains active until logging out. I've also used the player persistence to start the
 player profile page. My goal for tomorrow is to complete all of the backend wiring for my remaining models.
 
